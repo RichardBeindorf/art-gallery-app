@@ -1,5 +1,6 @@
 import useSWR from "swr"
 import ArtPieceList from "./components/index"
+import Spotlight from "./components/Spotlight/index"
 
 export default function HomePage() {
   const { data, error, isLoading } = useSWR("https://example-apis.vercel.app/api/art")
@@ -10,7 +11,8 @@ export default function HomePage() {
   console.log(data);
   return (
     <div>
-      <h1>Welcome to our - Art Gallery App!</h1>
+      <h1>Welcome to the<br/><em>Art Gallery</em>!</h1>
+      <Spotlight data={data}/>
       <ul>
         {data.map((piece) => (
           <li key={piece.slug}>
