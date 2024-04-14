@@ -6,11 +6,10 @@ export default function Spotlight({ data }){
     {data.map((piece) => {
     return <div key={piece.slug}>
     <Image 
-    fill={true}
     src={piece.imageSource}
     alt={`A paintig by the artist`}
-    // height={200}
-    // width={200}
+    height={200}
+    width={200}
     />
     <h6>Made by {piece.artist}</h6>
     </div>
