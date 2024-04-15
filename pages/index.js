@@ -9,18 +9,10 @@ export default function HomePage() {
   if (error) return <div>failed to load</div>
   if (isLoading) return <div>loading...</div>
 
-  console.log(data);
   return (
     <div>
-      <h1>Welcome to the<br/><em>Art Gallery</em>!</h1>
-      <Spotlight data={data}/>
-      <ul>
-        {data.map((piece) => (
-          <li key={piece.slug}>
-            <ArtPieceList pieces={piece} title={piece.name} artist={piece.artist}/>
-          </li>
-        ))}
-      </ul>
+      <h1>Welcome to our - Art Gallery App!</h1>
+      <ArtPieceList data={data}/>
     </div>
   );
 }
