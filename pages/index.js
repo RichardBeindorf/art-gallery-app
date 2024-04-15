@@ -2,6 +2,7 @@ import useSWR from "swr"
 import ArtPieceList from "./components/index"
 import Spotlight from "./components/Spotlight/index"
 
+
 export default function HomePage() {
   const { data, error, isLoading } = useSWR("https://example-apis.vercel.app/api/art")
 
@@ -16,7 +17,7 @@ export default function HomePage() {
       <ul>
         {data.map((piece) => (
           <li key={piece.slug}>
-            <ArtPieceList pieces={piece} title={piece.name} artist={piece.artist} image={"https://example-apis.vercel.app/assets/art/orange-red-and-green.jpg"}/>
+            <ArtPieceList pieces={piece} title={piece.name} artist={piece.artist}/>
           </li>
         ))}
       </ul>
