@@ -1,18 +1,16 @@
 import Image from 'next/image'
 
-export default function Spotlight({ data }){
-
+export default function Spotlight({ spotlightPiece }){
+    console.log(spotlightPiece)
     return <>
-    {data.map((piece) => {
-    return <div key={piece.slug}>
+    <div key={spotlightPiece.slug}>
     <Image 
-    src={piece.imageSource}
+    src={spotlightPiece.imageSource}
     alt={`A paintig by the artist`}
     height={200}
     width={200}
     />
-    <h6>Made by {piece.artist}</h6>
+    <h6>Made by {spotlightPiece.artist}</h6>
     </div>
-    })}
     </>
 }
