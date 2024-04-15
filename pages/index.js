@@ -1,5 +1,7 @@
 import useSWR from "swr"
 import ArtPieceList from "./components/index"
+import Spotlight from "./components/Spotlight/index"
+
 
 export default function HomePage() {
   const { data, error, isLoading } = useSWR("https://example-apis.vercel.app/api/art")
