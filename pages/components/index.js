@@ -1,11 +1,18 @@
+import ArtPiecePreview from "./Preview/index";
 
-export default function ArtPieceList({ pieces, title, artist, image}) {
-    
+
+export default function ArtPieceList({ data }) {
     return <div>
-        <h4>{title}</h4>
-        <h6>{artist}</h6>
-        <img src={image}/>
-        {/* <ArtPiece /> */}
+        <ul>
+        {data.map((piece) => {
+            const imageUrl = piece.imageSource;
+            console.log("Image URL:", imageUrl);
+            <li key={piece.slug}>
+                <ArtPiecePreview title={piece.name} artist={piece.artist} image={imageUrl}/>
+            </li>
+        })}
+      </ul>
         </div>
   }
+  
   

@@ -19,15 +19,8 @@ export default function HomePage() {
 
   return (
     <div>
-      <h1>Welcome to the<br/><em>Art Gallery</em>!</h1>
-      <Spotlight spotlightPiece={spotlightPiece}/>
-      {/* <ul>
-        {data.map((piece) => (
-          <li key={piece.slug}>
-            <ArtPieceList pieces={piece} title={piece.name} artist={piece.artist}/>
-          </li>
-        ))}
-      </ul> */}
+      <h1>Welcome to our - Art Gallery App!</h1>
+      <ArtPieceList data={data}/>
       <button onClick={handleRandomPiece}>New Spotlight Piece</button>
     </div>
   );
