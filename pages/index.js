@@ -2,6 +2,7 @@ import ArtPieceList from "../components/index";
 import Spotlight from "../components/Spotlight/index";
 import { useState } from "react";
 
+
 export default function HomePage({ data }) {
   const [spotlightPiece, setSpotlightPiece] = useState({
     slug: "blue-and-red",

@@ -1,14 +1,14 @@
 const { default: Link } = require("next/link");
 
 
-export const Navigation = () => {
+export default function Navigation({ data }) {
 
   return (
     <nav>
       <ul>
         <li>
           {/* Hier noch Verlinkungen anpassen */}
-          <Link href="/">Spotlight</Link>
+          <button><Link href="/">Spotlight</Link></button>
         </li>
         <li>
           <Link href="/components/">Art Pieces List</Link>
