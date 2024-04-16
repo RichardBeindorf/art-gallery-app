@@ -1,8 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { Navigation } from "./components/Navigation";
 
-export default class MyDocument extends Document {
+export default class MyDocument extends Document ({ data }) {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
@@ -29,9 +28,6 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head />
         <body>
-          <header>
-            <Navigation />
-          </header>
           <Main />
           <NextScript />
         </body>
